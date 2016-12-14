@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello AngularJS World</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.9/angular.min.js"></script>
+
+</head>
+<body ng-app ng-init="msg = 'Hello World!'"> <!-- ng-app is bootStrapping...the idea of grabbing your Angular code to do something with the page -->
+
+    <h1>{{ msg | currency }}</h1>
+    <h1>{{ ::msg }}</h1>
+    <h1 ng-bind="msg"></h1>
+    <h1 ng-bind="::msg"></h1> <!-- the :: makes it so angular doesn't keep a listener on the "msg" class...it will remain unchanged as you change stuff-->
+
+
+
+    <input type="text" ng-model="msg" />
+    <input type="text" ng-model="msg" />
+
+</body>
+</html>

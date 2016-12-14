@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello AngularJS World (day 3)</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.9/angular.js"></script>
+    <script src="mycontroller.js"></script>
+</head>
+
+<body ng-app="myapp" ng-controller="myController as vm"> <!-- vm stands for view model -->
+
+Enter a number:<input type="text" ng-model="vm.number">
+<h1>{{ vm.number }}</h1>
+<button ng-click="vm.double(2)">Multiply!</button>
+
+<h1>{{ vm.result }}</h1> <!-- in order to use a function in here, you have to have the () -->
+<h1>{{ vm.msg | lowercase }}</h1>
+<h1>{{ ::vm.msg }}</h1>
+<h1 ng-bind="vm.msg">hd</h1>
+<h1 ng-bind="::vm.msg"></h1>
+<input type="text" ng-model="vm.msg" />
+<input type="text" ng-model="vm.msg" />
+
+</body>
+</html>
